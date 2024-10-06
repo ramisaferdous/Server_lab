@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="home.css"> <!-- Link your CSS file -->
+</head>
+<body>
+  <h1 id="user-name"></h1>
+  <h2>Your Anime List</h2>
+  <ul id="anime-list"></ul>
+<form id="add-anime-form" action="/addAnime" method="GET" style="display:inline;">
+  <input type="hidden" name="email" id="user-email" />
+  <button type="submit" class="add-button">Add Anime</button>
+</form>
+
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const email = urlParams.get('email');
+
+  fetch(`/api/user?email=${email}`)
+    .then(response => response.json())
+    .then(user => {
+      document.getElementById('user-name').innerText = `Welcome, ${user.name}`;
+      const animeList = document.getElementById('anime-list');
+      user.animeList.forEach((anime, index) => {
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `
+          <span class="anime-title">${anime}</span>
+          <form action="/editAnime" method="GET" style="display:inline;">
+            <input type="hidden" name="email" value="${email}" />
+            <input type="hidden" name="index" value="${index}" />
+            <button type="submit" class="edit-button">Edit</button>
+          </form>
+          <form action="/deleteAnime" method="POST" style="display:inline;">
+            <input type="hidden" name="email" value="${email}" />
+            <input type="hidden" name="index" value="${index}" />
+            <button type="submit" class="delete-button">Delete</button>
+          </form>
+        `;
+        animeList.appendChild(listItem);
+      });
+
+      document.getElementById('user-email').value = email;
+    });
+</script>
+
+</body>
+</html>

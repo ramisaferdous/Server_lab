@@ -1,0 +1,38 @@
+[
+  {
+    "name": "alisha",
+    "email": "alisha@gmail.com",
+    "password": "$2a$10$166gH6uxxu7ofnZcALt1De61pnFGTjTgq/Yo2yNIJBKTDjInaKRke",
+    "animeList": [
+      "qw",
+      "qw"
+    ]
+  },
+  {
+    "name": "r",
+    "email": "r@iut-dhaka.edu",
+    "password": "$2a$10$bvAKeTGkCQtBcDdgkHTxwuyxEg0ZTSCoDf0Zxx7WZJtnGBPPzjYyi",
+    "animeList": [
+      "122",
+      "2"
+    ]
+  },
+  {
+    "name": "Ramisa",
+    "email": "ramisa@gmail.com",
+    "password": "$2a$10$j1MLMw6MSYraihSVTPj/hefpSShSCT1xgTM800DOfFa9BNHPMpOd.",
+    "animeList": [
+      "Haikyuu",
+      "AOT"
+    ]
+  },
+  {
+    "name": "Ryaan",
+    "email": "ryaan@gmail.com",
+    "password": "$2a$10$gJsFyqMFmrqgeRxhCBa48ujTa1bKrOllF.O31sr6Y3lfgDbkumFu6",
+    "animeList": [
+      "Haikyuu2",
+      "Fruits Basket"
+    ]
+  }
+]

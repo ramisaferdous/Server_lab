@@ -1,0 +1,113 @@
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    color: #2b092f;
+    font-size: 24px;
+}
+
+h2 {
+    color: #5c485e;
+    font-size: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 2px 0;
+}
+
+li {
+    background-color: #f9f9f9;
+    margin: 7px 0;
+    padding: 10px 20px;
+    width: 100%; /* Make the list item full width */
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap; /* Prevent text from wrapping into a second line */
+}
+
+.anime-title {
+    flex: 1;
+    white-space: nowrap; /* Prevent anime titles from wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Show '...' if the text is too long */
+    min-width: 0;
+}
+
+button {
+    border: none;
+    padding: 10px 30px; /* Adjusted padding to make the buttons smaller */
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px; /* Space between buttons */
+}
+
+.add-button {
+    background-color: #c9bacc;
+    color: white;
+}
+
+.edit-button {
+    background-color: #929bcb;
+    color: white;
+}
+
+.delete-button {
+    background-color: #d2888d;
+    color: white;
+}
+
+.add-button:hover {
+    background-color: #5c485e;
+}
+
+.edit-button:hover {
+    background-color: #525a87;
+}
+
+.delete-button:hover {
+    background-color: #c0392b;
+}
+
+form {
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border 0.3s;
+}
+
+p {
+    margin-top: 20px;
+    color: #777;
+}
